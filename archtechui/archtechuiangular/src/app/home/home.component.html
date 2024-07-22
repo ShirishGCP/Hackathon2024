@@ -1,0 +1,19 @@
+<div class="container" >
+    <button mat-icon-button class="search-button" (click)="navigateToCommunity()">
+      <mat-icon>search</mat-icon>
+    </button>
+</div>
+
+<div class="home-container" *ngIf="loggedIn">
+    <mat-card *ngFor="let detail of details" class="mat-card">
+      <mat-card-header>
+        <mat-card-title>{{detail.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content >
+        <app-detail  [title]="detail.title" [items]="detail.items"></app-detail>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+ 
+  

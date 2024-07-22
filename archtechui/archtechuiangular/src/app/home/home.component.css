@@ -1,0 +1,29 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+
+  .container {
+    position: relative;
+    height: 50px; /* Adjust height as needed */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px; /* Adjust padding as needed */
+  }
+  
+  .search-button {
+    position: absolute;
+    top: 50%; /* Adjust vertical position */
+    right: 20px; /* Adjust horizontal position */
+    transform: translateY(-50%);
+    background: lightblue;
+  }
+  
+  .mat-card{
+    margin:25px;
+    background: lightblue;
+    
+  }

@@ -1,0 +1,31 @@
+<div class="community-list">
+    <div class="main-column">
+        <mat-card *ngFor="let community of communities" class="main-card" (click)="onCardClicked(community)">
+            <mat-card-header>
+                <mat-card-title>{{ community.name }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{ community.description }}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div *ngIf="selectedCommunity" class="side-column">
+        <mat-card class="selected-card">
+            <mat-card-header>
+                <mat-card-title>Announcement</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{ selectedCommunity.name }}</p>
+                <mat-card *ngFor="let announcement of announcements" class="custom-card">
+                    <mat-card-header>
+                        <mat-card-title>{{ announcement.title }}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{ announcement.description }}</p>
+                    </mat-card-content>
+                </mat-card>
+                <button mat-button color="primary" (click)="clearSelection()">Close</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

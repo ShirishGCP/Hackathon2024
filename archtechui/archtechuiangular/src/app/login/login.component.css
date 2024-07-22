@@ -1,0 +1,38 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust height as needed */
+  padding: 16px;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  background: #002b5c;
+  color: white;
+  height: calc(100% - 32px);
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.submit-button {
+  width: 100%;
+  background: lightblue;
+}
+
+@media (max-width: 600px) {
+  .form-card {
+    max-width: 100%;
+  }
+}
+
+.header {
+  margin-bottom: 20px; /* Optional: Add margin bottom to create space between header and content */
+      display: block;
+}
+

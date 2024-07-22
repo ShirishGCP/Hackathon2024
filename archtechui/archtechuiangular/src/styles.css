@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+@import url('../node_modules/simple-keyboard/build/css/index.css');
+body{
+  
+  background-color:#ffffff;
+  height: 100%;
+}
+.html {
+  height: 100%;
+}
+.auth-card{
+  background: #1a4579;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1a4579, #1a4579);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1a4579, #1a4579); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px #f7f7f7;
+}
+.user-image{
+  height: 70px;
+}
+.auth-avatar{
+  text-align: center;
+  margin-top: -50px;
+}
+.auth{
+  margin-top: 35px;
+  border: none;
+  border-radius: 6px;
+}
+.btn-my{
+  background-color: #d39e00;
+  border-color: #d39e00;
+  color: #fff;
+}
+.simple-keyboard {
+  max-width: 850px;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Apply rounded corners to the input inside mat-form-field */
+.mat-form-field .mat-input-element {
+  border-radius: 20px; /* Adjust the radius as needed */
+}
+
+/* Optional: Adjust the height and padding for better aesthetics */
+.mat-form-field .mat-form-field-wrapper {
+  padding: 0 12px; /* Adjust padding if needed */
+  height: 48px; /* Adjust height if needed */
+}
+.mat-mdc-text-field-wrapper {
+  border-radius: 20px;
+}

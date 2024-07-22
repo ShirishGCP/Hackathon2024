@@ -1,0 +1,27 @@
+<!-- <mat-toolbar color="primary">
+    <span>Dementia Carer App</span>
+    <span class="fill-remaining-space"></span>
+    <button mat-flat-button routerLink="/login">Login</button>
+    <button mat-flat-button routerLink="/signup">Signup</button>
+  </mat-toolbar>
+  <mat-sidenav-container> -->
+    <mat-toolbar class="mat-elevation-z8">
+        <mat-toolbar-row>
+          <!-- <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+            <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+            <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+          </button> -->
+          <button mat-icon-button routerLink="/sidenav" class="menu-icon">
+            <mat-icon> menu </mat-icon>
+          </button>
+          DemAssist
+          <span class="spacer"></span>
+          <span *ngIf="loggedIn">Welcome, {{ currentUser }}</span>
+          <button mat-icon-button (click)="logout()" *ngIf="loggedIn" class="menu-icon">
+            <mat-icon>exit_to_app</mat-icon>
+          </button>
+          <button mat-button routerLink="/signup" class="button" *ngIf="!loggedIn">Signup</button>
+          <button mat-button routerLink="/login" class="button" routerLinkActive="active" *ngIf="!loggedIn">Login</button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      

@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="sidebar">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Search For</mat-card-title>
+      </mat-card-header>
+      <mat-radio-group aria-label="Select an option" [(ngModel)]="selectedUserType">
+        <mat-radio-button *ngFor="let usertype of userTypes" [value]="usertype">{{ usertype }}</mat-radio-button>
+      </mat-radio-group>
+      <button mat-raised-button color="primary" (click)="searchNearby()">Search</button>
+    </mat-card>
+    <mat-card *ngFor="let result of nearbyUsers" class="card">
+      <mat-card-header>
+      <mat-card-title>{{ result.firstName }}</mat-card-title>
+      <mat-card-subtitle>{{ result.userType }}</mat-card-subtitle>
+    </mat-card-header>
+      <mat-card-content>
+        <p>{{ location.latitude }}</p>
+        <!-- <p>Name : {{ result.firstName }} Role:{{ result.userType }} Location:{{ result.location.latitude }}</p> -->
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="content">
+    <mat-card class="map-card">
+      <mat-card-content>
+        <google-map mapId="myMap" height="400px" width="100%" [center]="center" [zoom]="zoom">
+          @for (marker of markers; track marker) {
+          <map-advanced-marker [position]="marker.position" title="{{marker.title}}" />
+          }
+        </google-map>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- <h3>Seach for:</h3>
+<mat-radio-group
+  aria-labelledby="usertype-radio-group-label"
+  class="usertype-radio-group"
+  [(ngModel)]="selectedUserType">
+  @for (userType of userTypes; track userType) {
+    <mat-radio-button class="usertype-radio-button" [value]="userType">{{userType}}</mat-radio-button>
+  }
+</mat-radio-group>
+<button mat-raised-button (click)="searchNearby()">Search</button> -->
+<!-- <div style="display: block;width: 100%;">
+<div class="user-list">
+        <div *ngFor="let user of nearbyUsers" class="list-item">
+            <mat-card appearance="raised">
+                <mat-card-content>
+                <div><strong>First Name:</strong>{{user.firstName}}</div>
+                <div><strong>Type:</strong> {{user.userType}}</div>
+                <div><strong>Location:</strong>{{user.location.latitude}}, {{user.location.longitude}}</div>
+            </mat-card-content>
+        </mat-card>
+        </div>
+</div>
+<div class="map-window">
+<google-map 
+  mapId="myMap"
+  height="400px"
+  width="100%"
+  [center]="center"
+  [zoom]="zoom">
+  @for (marker of markers; track marker) {
+    <map-advanced-marker [position]="marker.position" title="{{marker.title}}"/>
+  }
+  </google-map>
+</div>
+</div> -->

@@ -1,0 +1,23 @@
+<div class="chatbot-wrapper">
+<mat-accordion>
+<mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+    <mat-expansion-panel-header class="chatbot-header">
+         <mat-panel-title> Ask Me Anything! </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div #scrollMe class="chatbot-content">
+        <div *ngFor="let message of messages" class="message">
+            <mat-card appearance="outlined" class="{{message.type == 'sender'? 'sender-message' : 'bot-message'}}">
+                <mat-card-content>{{message.message}}</mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <div class="chatbot-question-area">
+            <mat-form-field style="width: 40%;">
+                <mat-label>Write your question here!</mat-label>
+                <textarea matInput placeholder="Ex. It makes me feel..." [(ngModel)]="inputText"></textarea>
+              </mat-form-field>
+              <button mat-flat-button (click)="sendMessage()">Send</button>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
+</div>

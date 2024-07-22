@@ -1,0 +1,46 @@
+.community-list {
+    display: flex;
+    gap: 20px; /* Adjust spacing between columns */
+  }
+  
+  .main-column {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Fixed width for main column */
+  }
+  
+  .main-card {
+    width: 100%; /* Main cards take full width of main column */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: 20px; /* Add top margin */
+    margin-left:25px;
+  }
+  
+  .main-card:hover {
+    transform: scale(1.05); /* Scale up card on hover */
+  }
+  
+  .side-column {
+    width: 300px; /* Fixed width for side column */
+  }
+  
+  .selected-card {
+    background-color: #f0f0f0; /* Example background color */
+    background: lightblue; /* Example text color */
+    padding: 15px;
+    margin-top: 20px;
+    margin-left:25px;
+    width:100%;
+  }
+  
+  .selected-card mat-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .selected-card button {
+    margin-top: 10px;
+  }
+  

@@ -1,0 +1,38 @@
+<div class="form-container">
+  <mat-card class="form-card">
+    <mat-card-header class="header">
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+        <!-- Email or Mobile Number -->
+        <mat-form-field class="form-field">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" placeholder="Enter your email" required>
+        </mat-form-field>
+
+        <!-- Role -->
+        <!-- <mat-form-field class="form-field">
+          <mat-label>Role</mat-label>
+          <mat-select formControlName="role" placeholder="Select your role" required>
+            <mat-option *ngFor="let role of roles" [value]="role.value">{{ role.viewValue }}</mat-option>
+          </mat-select>
+        </mat-form-field> -->
+
+        <!-- Password -->
+        <mat-form-field class="form-field">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" placeholder="Enter your password" required>
+        </mat-form-field>
+
+        <!-- Error Message
+        <mat-error *ngIf="loginForm.invalid && (loginForm.controls.emailOrMobile.dirty || loginForm.controls.password.dirty)">
+          Please enter a valid email or mobile number and password.
+        </mat-error> -->
+
+        <!-- Submit Button -->
+        <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid" class="submit-button">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

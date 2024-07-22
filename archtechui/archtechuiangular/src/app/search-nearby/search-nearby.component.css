@@ -1,0 +1,112 @@
+.usertype-radio-group {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.usertype-radio-button {
+    margin: 5px;
+
+}
+
+.usertype-radio-button>label {
+    color: gray !important;
+}
+
+.user-list {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    height: auto;
+}
+
+.map-window {
+    width: 50%;
+    display: inline-block;
+    float: right;
+}
+
+.list-item {
+    padding: 10px;
+    margin: 10px;
+    border-color: red;
+    height: auto;
+
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Adjust height as needed */
+    padding: 16px;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    background: lightblue;
+    color: white;
+    height: calc(100% - 32px);
+}
+
+.form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.submit-button {
+    width: 100%;
+    background: lightblue;
+}
+
+@media (max-width: 600px) {
+    .form-card {
+        max-width: 100%;
+    }
+}
+
+.header {
+    margin-bottom: 20px;
+    /* Optional: Add margin bottom to create space between header and content */
+    display: block;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 60%;
+    padding: 20px;
+}
+
+.content {
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.map-card {
+    width: 100%;
+    /* 50% width with gap */
+}
+
+.card {
+    width: 100%;
+    background: lightblue;
+    margin: 20px;
+}
+
+.map {
+
+    width: 100%;
+    height: 400px;
+}
